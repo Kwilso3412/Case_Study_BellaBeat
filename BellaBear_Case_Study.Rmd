@@ -1,0 +1,55 @@
+---
+title: "Case Study: BellaBeat"
+author: "Kahlyll Wilson"
+date: "`r format(Sys.time(), '%B %d , %Y')`"
+output: pdf_document
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Overview
+
+The following case study was completed apart of the Google Data Analytics Professionals course. It is based on the fictional Company BellaBeat a high-tech manufacturer of health-focused products for women. 
+
+In this scenario I was tasked with helping Bellabeat become a potential big player in the global smart device market. The Cofounder and Chief Creatitve Officer,Urška Sršen, believes that analyzing smart device fitness data could help unlock new growth opportunites for the company. Along with Sršen another key stake holder is Sando Mur a mathmetichian and Bellabeats cofounder. 
+
+The company offers a variety of products such as:
+
+* Bellabeat App
+* Leaf: a classic wellness tracker
+* Time: a wellness watch combines timeless look of a classic timepiece with smart technology
+to track user activity
+* Spring: This is a water bottle that tracks daily water intake using smart technology
+* Bellabeat membership: a subscription-based membership program for users.
+
+## Buisness Task
+
+In this scenario I have been tasked with completing the following requirements for the key stakeholders:
+
+1. Analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart devices.
+2. select one Bellabeat product to apply these insights to in your presentation
+
+Through completing the tasks this report will explain to key stakeholders:
+
+1. What are some trends in smart device usuage?
+2. How could the trends apply to the bellabeat customer?
+3. How can both my team members and stakeholders use these insishts to make data driven decisoins
+
+
+## Analysis
+
+The analysis was completed using the [FitBit Fitness Tracker Data (FFTD)](https://www.kaggle.com/datasets/arashnic/fitbit). The FFTD dataset is open to the public and can be found on the [Kaggle website](https://www.kaggle.com/#). 
+
+
+For the analysis I first cleaned the and processed the data using SQL. With the clean data I completed my analysis using R.
+
+
+
+## Results 
+
+
+
+## Conclusions
