@@ -10,6 +10,7 @@ urlcolor: blue
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+### NOTE: code and files can be found in [Github repository](https://github.com/Kwilso3412/Case_Study_BellaBeat)
 ## Overview
 
 The following case study was completed apart of the Google Data Analytics Professionals course. It is based on the fictional Company BellaBeat a high-tech manufacturer of health-focused products for women. 
@@ -44,16 +45,9 @@ Through completing the tasks this report will explain to key stakeholders:
 ### Data gathering and cleaning phase
 The analysis was completed using the [FitBit Fitness Tracker Data (FFTD)](https://www.kaggle.com/datasets/arashnic/fitbit). The FFTD dataset is open to the public and can be found on the [Kaggle website](https://www.kaggle.com/#). 
 
-For the analysis I first cleaned and organized the data using excel when I pulled the raw data file from FFTD I noticed that there were multiple spread sheets that had overlapping data. To make sure I was not looking at repeated data I combined all of them into one file using the XLOOKUP function. Using this feature I was able to bring in the data from the four spread sheets and compile it into one data set that I could analyze. 
+For the analysis I first cleaned and organized the data using excel when I pulled the raw data file from FFTD I noticed that there were multiple spread sheets that had overlapping data. To make sure I was not looking at repeated data I combined all of them into one file using the XLOOKUP function. Using this feature I was able to bring in the data from [the four spread sheets and compile it into one data set](https://github.com/Kwilso3412/Case_Study_BellaBeat/tree/main/FitBit%20Tracker%20data) that I could analyze. 
 
 During this stage I noticed something interesting from the data. When it came to overall logging the active distance with the fitness tracker it was very rare or noe at all. There were also inconsistent metrics being recorded when users are either Very active or Moderately active. However, when it it came to light active distance tracking, the results were overwhelmingly positive. With showing results that at least everyday each user was engagin in light activity. 
-
-```{r}
-library(readxl)
-Full_Data_cleaned_set <- read_excel("~/Desktop/Full_Data_cleaned_set.xls")
-View(Full_Data_cleaned_set)
-
-```
 
 
 ### Analysis phase
