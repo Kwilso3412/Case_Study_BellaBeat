@@ -41,11 +41,24 @@ Through completing the tasks this report will explain to key stakeholders:
 
 ## Analysis
 
+### Data gathering and cleaning phase
 The analysis was completed using the [FitBit Fitness Tracker Data (FFTD)](https://www.kaggle.com/datasets/arashnic/fitbit). The FFTD dataset is open to the public and can be found on the [Kaggle website](https://www.kaggle.com/#). 
 
+For the analysis I first cleaned and organized the data using excel when I pulled the raw data file from FFTD I noticed that there were multiple spread sheets that had overlapping data. To make sure I was not looking at repeated data I combined all of them into one file using the XLOOKUP function. Using this feature I was able to bring in the data from the four spread sheets and compile it into one data set that I could analyze. 
 
-For the analysis I first cleaned the and processed the data using SQL. With the clean data I completed my analysis using R.
+During this stage I noticed something interesting from the data. When it came to overall logging the active distance with the fitness tracker it was very rare or noe at all. There were also inconsistent metrics being recorded when users are either Very active or Moderately active. However, when it it came to light active distance tracking, the results were overwhelmingly positive. With showing results that at least everyday each user was engagin in light activity. 
 
+```{r}
+library(readxl)
+Full_Data_cleaned_set <- read_excel("~/Desktop/Full_Data_cleaned_set.xls")
+View(Full_Data_cleaned_set)
+
+```
+
+
+### Analysis phase
+
+For the analysis portion of this case study it was completed using SQL and BigQuery database.
 
 
 ## Results 
