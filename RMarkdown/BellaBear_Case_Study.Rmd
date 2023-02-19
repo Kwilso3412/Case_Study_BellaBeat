@@ -68,4 +68,9 @@ Once I had my results I took them out of the data base and stored them in a [sep
 
 
 
+The combined graph can be shown on [Tableu](https://public.tableau.com/views/CaseStudyBellaBeatFitnessTracker/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link) 
+
+![Tableu Table: Activity Over Time](/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/Tableau/Activity Over Time.png)
+![Calories Burned](/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/Tableau/Calories Burned.png)
+
 ## Conclusions
