@@ -10,7 +10,7 @@ urlcolor: blue
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### NOTE: code and files can be found in [Github repository](https://github.com/Kwilso3412/Case_Study_BellaBeat)
+### NOTE: code and files can be found in [Github Repository](https://github.com/Kwilso3412/Case_Study_BellaBeat)
 ## Overview
 
 The following case study was completed apart of the Google Data Analytics Professionals course. It is based on the fictional Company BellaBeat a high-tech manufacturer of health-focused products for women. 
