@@ -52,10 +52,18 @@ During this stage I noticed something interesting from the data. When it came to
 
 ### Analysis phase
 
-For the analysis portion of this case study it was completed using SQL and BigQuery database.
+### How anlaysis was conducted
 
+For the analysis portion of this case study it was completed using [SQL and BigQuery database](https://github.com/Kwilso3412/Case_Study_BellaBeat/tree/main/SQL%20Query%20Code). 
 
-## Results 
+I broke the large data down to answer the query's below 
+  * What was the Average activity per day?
+  * What was each users Average Activity?
+  * What was the Average of all the users?
+  
+Once I had my results I took them out of the data base and stored them in a [seperate folder](https://github.com/Kwilso3412/Case_Study_BellaBeat/tree/main/SQL%20Query%20Code/Results). Then Used a combination of R and Tableu to visualize the results. 
+
+### Results 
 
 
 
