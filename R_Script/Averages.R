@@ -5,12 +5,9 @@ install.packages("tidyverse")
 library(tidyverse) 
 install.packages("ggplot2") 
 library(ggplot2)
-install.packages("dplyr")
 library(dplyr)
 
 #####  Calories   #################################
-
-
 
 # loads calories file
 library(readxl)
@@ -39,7 +36,7 @@ filt_trac = filter(trac, Distance_tracked_Per_Day > 2.5)
 
 # Makes scatter plot for the Average Tracked Distance per day
 ggplot(data=filt_trac, mapping = aes(x=ActivityDate, y=Distance_tracked_Per_Day)) +geom_point() +
-  geom_smooth(method = lm) + ggtitle('Average Tracked Distance Per Day') + labs(x = 'Day', y ='Distance')
+  geom_smooth(method = lm) + ggtitle('Average Tracked Distance Per Day') + labs(x = 'Day', y ='Distance (mi)')
 
 
 
@@ -56,7 +53,7 @@ filt_dis= filter(dis, Distance_traveled_Per_Day > 2.5)
 
 # Makes scatter plot for the Average Tracked Distance per day
 ggplot(data=filt_dis, mapping = aes(x=ActivityDate, y=Distance_traveled_Per_Day)) +geom_point() +
-  geom_smooth(method = lm) + ggtitle('Average Distance Per Day') + labs(x = 'Day', y ='Distance')
+  geom_smooth(method = lm) + ggtitle('Average Distance Per Day') + labs(x = 'Day', y ='Distance (mi)')
 
 
 
