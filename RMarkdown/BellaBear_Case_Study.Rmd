@@ -5,16 +5,16 @@ date: "`r format(Sys.time(), '%B %d , %Y')`"
 output: pdf_document
 urlcolor: blue
 ---
-<base target="_blank">
-```{r setup, include=FALSE}
 
+```{r setup, include=FALSE}
+  library(pandoc)
   library(ggplot2)
   library(dplyr)
 
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-### NOTE: code and files can be found in [Github Repository](https://github.com/Kwilso3412/Case_Study_BellaBeat)
+### NOTE: code and files can be found in the full [Github Repository](https://github.com/Kwilso3412/Case_Study_BellaBeat ){target="_blank"}
 
 <!----adds a blank page to make it more readable when converted to PDF --->
 <p>&nbsp;</p>
