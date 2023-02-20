@@ -116,7 +116,7 @@ The first metric I analyzed was calories per day. After isolating just the calor
 
 # loads calories file
   library(readxl)
-  calories <- read_excel("/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/SQL Query Code/Results/Average Calories per day.xls")
+  calories <- read_excel("/Users/kahlyllwilson/Desktop/excel sheets/Average Calories per day.xls")
   calo = data.frame(calories) 
   
     
@@ -145,7 +145,7 @@ When viewing the results for the steps. The data showed as time went on users we
 
   # loads steps file 
   library(readxl)
-  steps <- read_excel("/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/SQL Query Code/Results/Average steps per day.xls")
+  steps <- read_excel("/Users/kahlyllwilson/Desktop/excel sheets/Average steps per day.xls")
   ste = data.frame(steps)
   
   #Filters out the outlier
@@ -171,7 +171,7 @@ When viewing the results for the distance traveled. The data showed as time went
 
   # loads distance file
   library(readxl)
-  distance <- read_excel("/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/SQL Query Code/Results/Average Distance Traveled.xls")
+  distance <- read_excel("/Users/kahlyllwilson/Desktop/excel sheets/Average Distance Traveled.xls")
   dis = data.frame(distance)
   
   #Filters out the outlier
@@ -197,7 +197,7 @@ When viewing the results for the distance traveled. The data showed as time went
 
   # loads tracked distance file
   library(readxl)
-  tracked_distance <- read_excel("/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/SQL Query Code/Results/Average Distance Tracked.xls")
+  tracked_distance <- read_excel("/Users/kahlyllwilson/Desktop/excel sheets/Average Distance Tracked.xls")
   trac = data.frame(tracked_distance)
   
   #Filters out the outlier
