@@ -218,7 +218,7 @@ When viewing the results for the distance traveled. The data showed as time went
  <!----adds a blank page to make it more readable when converted to PDF --->
 <p>&nbsp;</p>
 
-![Tableu Table: Activity Over Time](/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/Tableau/Activity Over Time.png)
+![Tableu Table: Activity Over Time](/Users/kahlyllwilson/Desktop/image/Activity Over Time.png)
 
 
 <!----adds a blank page to make it more readable when converted to PDF --->
