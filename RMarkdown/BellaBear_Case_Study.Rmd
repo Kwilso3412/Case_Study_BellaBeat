@@ -209,7 +209,7 @@ When viewing the results for the distance traveled. The data showed as time went
 <!----adds a blank page to make it more readable when converted to PDF --->
 \newpage
 
- [The full combined graph can be viewed below or on Tableu](https://public.tableau.com/views/CaseStudyBellaBeatFitnessTracker/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link) 
+ [The full combined graph can be viewed below or on Tableu]([https://public.tableau.com/views/CaseStudyBellaBeatFitnessTracker/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link](https://public.tableau.com/app/profile/kahlyll.wilson/viz/CaseStudyBellaBeatFitnessTracker/ActivityOverTime) 
  
  <!----adds a blank page to make it more readable when converted to PDF --->
 <p>&nbsp;</p>
