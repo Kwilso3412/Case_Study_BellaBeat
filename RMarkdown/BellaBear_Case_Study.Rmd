@@ -7,6 +7,10 @@ urlcolor: blue
 ---
 
 ```{r setup, include=FALSE}
+
+  library(ggplot2)
+  library(dplyr)
+
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -20,7 +24,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 The following case study was completed apart of the Google Data Analytics Professionals course. It is based on the fictional Company BellaBeat a high-tech manufacturer of health-focused products for women. 
 
-In this scenario I was tasked with helping Bellabeat become a potential big player in the global smart device market. The Cofounder and Chief Creatitve Officer,Urška Sršen, believes that analyzing smart device fitness data could help unlock new growth opportunites for the company. Along with Sršen another key stake holder is Sando Mur a mathmetichian and Bellabeats cofounder. 
+In this scenario I was tasked as a data analysis to help Bellabeat become a potential big player in the global smart device market. The co-founder and Chief Creative Officer,Urška Sršen, believes that analyzing smart device fitness data could help unlock new growth opportunities for the company. Along with Sršen another key stakeholder is Sando Mur a mathematician and Bellabeats co-founder.
 
 The company offers a variety of products such as:
 
@@ -37,73 +41,69 @@ to track user activity
 ## Buisness Task
 
 
-In this scenario I have been tasked with completing the following requirements for the key stakeholders:
+In this scenario I've been tasked with completing the following requirements for the key stakeholders:
 
 1. Analyze smart device usage data in order to gain insight into how consumers use non-Bellabeat smart devices.
 2. select one Bellabeat product to apply these insights to in your presentation
 
 Through completing the tasks this report will explain to key stakeholders:
 
-1. What are some trends in smart device usuage?
-2. How could the trends apply to the bellabeat customer?
-3. How can both my team members and stakeholders use these insishts to make data driven decisoins
+1. What are some trends in smart device usage?
+2. How could the trends apply to the Bellabeat customer?
+3. How can both my team members and stakeholders use these insists to make data driven decisions
 
 <!----adds a blank page to make it more readable when converted to PDF --->
 \newpage
 
 ## Analysis
 
+I chose to focus on focus on the fitness tracker to complete this report. The analysis was completed using the [FitBit Fitness Tracker Data (FFTD)](https://www.kaggle.com/datasets/arashnic/fitbit). The FFTD data set is open to the public and can be found on the [Kaggle website](https://www.kaggle.com/#). 
+
 <!----adds a blank page to make it more readable when converted to PDF --->
 <p>&nbsp;</p>
 
 ### Data gathering and cleaning phase
-The analysis was completed using the [FitBit Fitness Tracker Data (FFTD)](https://www.kaggle.com/datasets/arashnic/fitbit). The FFTD dataset is open to the public and can be found on the [Kaggle website](https://www.kaggle.com/#). 
 
-For the analysis I first cleaned and organized the data using excel when I pulled the raw data file from FFTD I noticed that there were multiple spread sheets that had overlapping data. To make sure I was not looking at repeated data I combined all of them into one file using the XLOOKUP function. Using this feature I was able to bring in the data from [the four spread sheets and compile it into one data set](https://github.com/Kwilso3412/Case_Study_BellaBeat/tree/main/FitBit%20Tracker%20data) that I could analyze. 
+Before analyzing the data I first cleaned and organized the data using excel when I pulled the raw data file from FFTD. I noticed there were multiple spread sheets that had overlapping data. To make sure I was not looking at repeated data I combined all of them into one file using the XLOOKUP function. [With The one excel sheet I imported it imported a relational databases](https://github.com/Kwilso3412/Case_Study_BellaBeat/tree/main/FitBit%20Tracker%20data). 
 
-During this stage I noticed something interesting from the data. When it came to overall logging the active distance with the fitness tracker it was very rare or noe at all. There were also inconsistent metrics being recorded when users are either Very active or Moderately active. However, when it it came to light active distance tracking, the results were overwhelmingly positive. With showing results that at least everyday each user was engagin in light activity. 
+During this stage I noticed something interesting about data. When it came to overall logging the distance with the fitness tracker it was very rare or none at all. There were also inconsistent metrics being recorded when users are either very active or moderately active. However, when it it came to light activity there was plenty of data recorded. At this stage its easy to determine that everyday the users were engaging with some form of activity. 
 
 
 ### Analysis phase
 
 ### How anlaysis was conducted
 
-For the analysis portion of this case study it was completed using [SQL and BigQuery database](https://github.com/Kwilso3412/Case_Study_BellaBeat/tree/main/SQL%20Query%20Code). 
+For the analysis portion of this case study it was completed using [SQL and the BigQuery database](https://github.com/Kwilso3412/Case_Study_BellaBeat/tree/main/SQL%20Query%20Code). 
 
-I broke the large data down to answer the query's below 
+I broke the large data down to answer the query's below
+
   * What was the Average activity per day?
   * What was each users Average Activity?
   * What was the Average of all the users?
   
-Once I had my results I took them out of the data base and stored them in a [seperate folder](https://github.com/Kwilso3412/Case_Study_BellaBeat/tree/main/SQL%20Query%20Code/Results). Then Used a combination of R and Tableu to visualize the results. 
+I stored these results into a [seperate folder](https://github.com/Kwilso3412/Case_Study_BellaBeat/tree/main/SQL%20Query%20Code/Results), then used a combination of R and Tableau to visualize the results. 
 
 ### Results 
 
 The following metrics were used to complete analysis
+
   * Total Calories Burned
   * Total Steps taken
   * Total Distance Traveled
   * Total Distance Tracked
 
-Through analysis of these metrics I found something interesting in the data. I noticed that in each of the data there was an outlier throwing off my day and, in each plot, it was a single point on May 12th. For each metric there was a significant drop in the data recorded. There are no significant holidays on this day unless a vast majority of people celebrate National Limerick Day and World Migratory Bird Day, and I am just unaware. I decided it was safe to remove this data point. 
+Through analysis of these metrics I found something interesting in the data. I noticed that in each of the data there was an outlier throwing off my data in each plot. There error came from it was a single point on May 12th. For each metric there was a significant drop in the data recorded on that day. There are no significant reasons or holidays on this day that this would seem reasonable. Unless a vast majority of people celebrate National Limerick Day & World Migratory Bird Day, and I am just unaware. I decided it was safe to remove this data point. 
 
 From the data I found that the average user:
+
   * Burned 2,304 Calories
   * Took 7,638 Steps
   * Traveled 5 miles
   * Tracked 5 miles 
 
-It is a good sign that the averge total distance traveled and the total distance tracked are the same because that means that the fitness tracker is working properly and tracking all the miles the users walk. 
+It is a good sign that the averge total distance traveled and the total distance tracked are the same because that means that the fitness tracker is working properly and tracking all the miles the users are active. 
 
-After reviewing the data for all the data for the averages for across all users. I wanted to see what the users were averaging per day. 
-
-<!----adds a blank page to make it more readable when converted to PDF --->
-<p>&nbsp;</p>
-
-The first metric I analyzed was calories per day. After isolating just the calories in sql I used the code below to plot a scatterplot and included a treadline to see how it would progress. The Plot shows a downward trend showing that as time goes on users burn less calories
-
-<!----adds a blank page to make it more readable when converted to PDF --->
-\newpage
+After reviewing the data for all the data for the averages for across each metric, I started to analyize the results per day. 
 
 The first metric I analyzed was calories per day. After isolating just the calories in sql I used the code below to plot a scatterplot and included a treadline to see how it would progress. The Plot shows a downward trend showing that as time goes on users burn less calories
 
@@ -111,8 +111,6 @@ The first metric I analyzed was calories per day. After isolating just the calor
 <p>&nbsp;</p>
 
 ```{r calories}
-  library(ggplot2)
-  library(dplyr)
 
 # loads calories file
   library(readxl)
@@ -125,7 +123,8 @@ The first metric I analyzed was calories per day. After isolating just the calor
   
   # Makes scatter plot for the Average Calories per day
   ggplot(data= filt_calo, mapping = aes(x=ActivityDate, y=Calories_Per_day)) +geom_point() +
-  geom_smooth(method = lm) + ggtitle('Average Calories Per Day') + labs(x = 'Day', y ='Calories')
+  geom_smooth(method = lm) + ggtitle('Average Calories Per Day') + 
+    labs(x = 'Day', y ='Calories')
 ```
 
 
@@ -140,8 +139,6 @@ When viewing the results for the steps. The data showed as time went on users we
 
 
 ```{r steps}
-  library(ggplot2)
-  library(dplyr)
 
   # loads steps file 
   library(readxl)
@@ -153,21 +150,20 @@ When viewing the results for the steps. The data showed as time went on users we
   
   # Makes scatter plot for the Average Tracked Distance per day
   ggplot(data=filt_ste, mapping = aes(x=ActivityDate, y=Average_Total_steps)) +geom_point() +
-    geom_smooth(method = lm) + ggtitle('Average Steps Per Day') + labs(x = 'Day', y ='Steps')
+    geom_smooth(method = lm) + ggtitle('Average Steps Per Day') + 
+    labs(x = 'Day', y ='Steps')
   
 ```
 
 <!----adds a blank page to make it more readable when converted to PDF --->
 \newpage
 
-When viewing the results for the distance traveled. The data showed as time went the distance users traveled less as time went on. 
+When viewing the results for the distance traveled. The data showed as time went the distance users traveled was mostly the same.  
 
 <!----adds a blank page to make it more readable when converted to PDF --->
 <p>&nbsp;</p>
 
 ```{r distance}
-  library(ggplot2)
-  library(dplyr)
 
   # loads distance file
   library(readxl)
@@ -179,21 +175,20 @@ When viewing the results for the distance traveled. The data showed as time went
   
   # Makes scatter plot for the Average Tracked Distance per day
   ggplot(data=filt_dis, mapping = aes(x=ActivityDate, y=Distance_traveled_Per_Day)) +geom_point() +
-    geom_smooth(method = lm) + ggtitle('Average Distance Per Day') + labs(x = 'Day', y ='Distance (mi)')
+    geom_smooth(method = lm) + ggtitle('Average Distance Per Day') + 
+    labs(x = 'Day', y ='Distance (mi)')
 
 ```
 
 <!----adds a blank page to make it more readable when converted to PDF --->
 \newpage
 
-When viewing the results for the distance traveled. The data showed as time went the distance being tracked was consitant with the distance traveled. As people traveled less there were less distance being tracked.
+When viewing the results for the distance traveled. The data showed as time went the distance being tracked was constant with the distance traveled. This is a positive result as I shows the tracking on the fitness tracker is accurate. 
 
 <!----adds a blank page to make it more readable when converted to PDF --->
 <p>&nbsp;</p>
 
 ```{r traveled distance}
-  library(ggplot2)
-  library(dplyr)
 
   # loads tracked distance file
   library(readxl)
@@ -205,7 +200,8 @@ When viewing the results for the distance traveled. The data showed as time went
   
   # Makes scatter plot for the Average Tracked Distance per day
   ggplot(data=filt_trac, mapping = aes(x=ActivityDate, y=Distance_tracked_Per_Day)) +geom_point() +
-    geom_smooth(method = lm) + ggtitle('Average Tracked Distance Per Day') + labs(x = 'Day', y ='Distance (mi)')
+    geom_smooth(method = lm) + ggtitle('Average Tracked Distance Per Day') + 
+    labs(x = 'Day', y ='Distance (mi)')
 
 
 ```
