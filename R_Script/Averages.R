@@ -1,9 +1,7 @@
 # installs necessary packages to complete analysis 
 install.packages('rmarkdown')
 library(rmarkdown)
-install.packages("tidyverse")
 library(tidyverse) 
-install.packages("ggplot2") 
 library(ggplot2)
 library(dplyr)
 
@@ -41,7 +39,7 @@ ggplot(data=filt_trac, mapping = aes(x=ActivityDate, y=Distance_tracked_Per_Day)
 
 
 
-#####  Total Distance #########################
+##### Distance #########################
 
 # loads distance file
 library(readxl)

@@ -11,6 +11,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ### NOTE: code and files can be found in [Github Repository](https://github.com/Kwilso3412/Case_Study_BellaBeat)
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+<p>&nbsp;</p>
+
+
 ## Overview
 
 The following case study was completed apart of the Google Data Analytics Professionals course. It is based on the fictional Company BellaBeat a high-tech manufacturer of health-focused products for women. 
@@ -26,7 +31,11 @@ to track user activity
 * Spring: This is a water bottle that tracks daily water intake using smart technology
 * Bellabeat membership: a subscription-based membership program for users.
 
+<!----adds a blank line to make it more readable when converted to PDF --->
+<p>&nbsp;</p>
+
 ## Buisness Task
+
 
 In this scenario I have been tasked with completing the following requirements for the key stakeholders:
 
@@ -39,8 +48,13 @@ Through completing the tasks this report will explain to key stakeholders:
 2. How could the trends apply to the bellabeat customer?
 3. How can both my team members and stakeholders use these insishts to make data driven decisoins
 
+<!----adds a blank page to make it more readable when converted to PDF --->
+\newpage
 
 ## Analysis
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+<p>&nbsp;</p>
 
 ### Data gathering and cleaning phase
 The analysis was completed using the [FitBit Fitness Tracker Data (FFTD)](https://www.kaggle.com/datasets/arashnic/fitbit). The FFTD dataset is open to the public and can be found on the [Kaggle website](https://www.kaggle.com/#). 
@@ -75,14 +89,139 @@ Through analysis of these metrics I found something interesting in the data. I n
 
 From the data I found that the average user:
   * Burned 2,304 Calories
-  * took 7,638 Steps
+  * Took 7,638 Steps
   * Traveled 5 miles
-  * 5 miles was tracked
+  * Tracked 5 miles 
+
+It is a good sign that the averge total distance traveled and the total distance tracked are the same because that means that the fitness tracker is working properly and tracking all the miles the users walk. 
+
+After reviewing the data for all the data for the averages for across all users. I wanted to see what the users were averaging per day. 
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+<p>&nbsp;</p>
+
+The first metric I analyzed was calories per day. After isolating just the calories in sql I used the code below to plot a scatterplot and included a treadline to see how it would progress. The Plot shows a downward trend showing that as time goes on users burn less calories
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+\newpage
+
+The first metric I analyzed was calories per day. After isolating just the calories in sql I used the code below to plot a scatterplot and included a treadline to see how it would progress. The Plot shows a downward trend showing that as time goes on users burn less calories
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+<p>&nbsp;</p>
+
+```{r calories}
+  library(ggplot2)
+  library(dplyr)
+
+# loads calories file
+  library(readxl)
+  calories <- read_excel("/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/SQL Query Code/Results/Average Calories per day.xls")
+  calo = data.frame(calories) 
+  
+    
+  #Filters out the outlier
+  filt_calo = filter(calo, Calories_Per_day > 1900) 
+  
+  # Makes scatter plot for the Average Calories per day
+  ggplot(data= filt_calo, mapping = aes(x=ActivityDate, y=Calories_Per_day)) +geom_point() +
+  geom_smooth(method = lm) + ggtitle('Average Calories Per Day') + labs(x = 'Day', y ='Calories')
+```
 
 
-The combined graph can be shown on [Tableu](https://public.tableau.com/views/CaseStudyBellaBeatFitnessTracker/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link) 
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+\newpage
+
+When viewing the results for the steps. The data showed as time went on users were taking less steps per day. 
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+<p>&nbsp;</p>
+
+
+```{r steps}
+  library(ggplot2)
+  library(dplyr)
+
+  # loads steps file 
+  library(readxl)
+  steps <- read_excel("/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/SQL Query Code/Results/Average steps per day.xls")
+  ste = data.frame(steps)
+  
+  #Filters out the outlier
+  filt_ste = filter(ste, Average_Total_steps > 2.5)
+  
+  # Makes scatter plot for the Average Tracked Distance per day
+  ggplot(data=filt_ste, mapping = aes(x=ActivityDate, y=Average_Total_steps)) +geom_point() +
+    geom_smooth(method = lm) + ggtitle('Average Steps Per Day') + labs(x = 'Day', y ='Steps')
+  
+```
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+\newpage
+
+When viewing the results for the distance traveled. The data showed as time went the distance users traveled less as time went on. 
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+<p>&nbsp;</p>
+
+```{r distance}
+  library(ggplot2)
+  library(dplyr)
+
+  # loads distance file
+  library(readxl)
+  distance <- read_excel("/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/SQL Query Code/Results/Average Distance Traveled.xls")
+  dis = data.frame(distance)
+  
+  #Filters out the outlier
+  filt_dis= filter(dis, Distance_traveled_Per_Day > 2.5) 
+  
+  # Makes scatter plot for the Average Tracked Distance per day
+  ggplot(data=filt_dis, mapping = aes(x=ActivityDate, y=Distance_traveled_Per_Day)) +geom_point() +
+    geom_smooth(method = lm) + ggtitle('Average Distance Per Day') + labs(x = 'Day', y ='Distance (mi)')
+
+```
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+\newpage
+
+When viewing the results for the distance traveled. The data showed as time went the distance being tracked was consitant with the distance traveled. As people traveled less there were less distance being tracked.
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+<p>&nbsp;</p>
+
+```{r traveled distance}
+  library(ggplot2)
+  library(dplyr)
+
+  # loads tracked distance file
+  library(readxl)
+  tracked_distance <- read_excel("/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/SQL Query Code/Results/Average Distance Tracked.xls")
+  trac = data.frame(tracked_distance)
+  
+  #Filters out the outlier
+  filt_trac = filter(trac, Distance_tracked_Per_Day > 2.5) 
+  
+  # Makes scatter plot for the Average Tracked Distance per day
+  ggplot(data=filt_trac, mapping = aes(x=ActivityDate, y=Distance_tracked_Per_Day)) +geom_point() +
+    geom_smooth(method = lm) + ggtitle('Average Tracked Distance Per Day') + labs(x = 'Day', y ='Distance (mi)')
+
+
+```
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+\newpage
+
+ [The full combined graph can be viewed below or on Tableu](https://public.tableau.com/views/CaseStudyBellaBeatFitnessTracker/Sheet1?:language=en-US&:display_count=n&:origin=viz_share_link) 
+ 
+ <!----adds a blank page to make it more readable when converted to PDF --->
+<p>&nbsp;</p>
 
 ![Tableu Table: Activity Over Time](/Users/kahlyllwilson/Library/CloudStorage/OneDrive-Personal/Desktop/Coding projects/R_Projects/Repository projects/Case_Study_Bellabeat/Tableau/Activity Over Time.png)
 
+
+<!----adds a blank page to make it more readable when converted to PDF --->
+\newpage
 
 ## Conclusions
