@@ -225,3 +225,17 @@ When viewing the results for the distance traveled. The data showed as time went
 \newpage
 
 ## Conclusions
+
+The analysis was a success as I was able to find out key information regarding our users and how they interact with the fitness tracker. 
+
+Form our sample size we gathered that users are more likely to engage in light activity (i.e. walking, light bike ride, etc.) than engaging with activities that are considered moderate or very active (i.e. running, rock climbing, etc.).
+
+I also noticed that users were not inclined to log in this activity, a possible reason for user not logging their activity could be that they simply did not fill the need to log the data since they did not think they doing their regular tasks or they may have forgotten to log the activity. 
+
+A way that we could improve this metric would be to have a setting in the app that automatically logs the data for the user. This option can be toggled on and off depending on the users preference and they will still have the choice to manually log in the information. 
+
+Another insight that I found was that as time went on the calories burned decrease. This could be another result in users not engaging in moderate or active activity. This shows the potential of being a issue because our customers bought our product because their goal is to lose weight and live healthier lives. If they are noticing that they are not losing weight or worse gaining weight it could lead to the loss of customers. 
+
+A possible solution would be to integrate a weekly fitness goal feature in our app that could be tracked on the fitness tracker. We could have the users create their own goals or give them a few generic goals such as, walking 10,000 steps for the week, Running 5 miles for the week, weight loss goals and so on. These goals would be tracked on a day by day basis and then every Sunday the user can read a report of their activity and ways to improve if they fell short. 
+
+Apart of the weekly goals we could have daily advice blogs to help promote healthy living. The articles would be short and take the average reader no longer that 2 minutes to read. This will help to encourage our users to stay the course and reach their fitness goals. 
