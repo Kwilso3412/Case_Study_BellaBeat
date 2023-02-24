@@ -216,9 +216,8 @@ When viewing the results for the distance traveled. The data showed as time went
 
 ![Tableu Table: Activity Over Time](/Users/kahlyllwilson/Desktop/image/Activity Over Time.png)
 
-
 <!----adds a blank page to make it more readable when converted to PDF --->
-\newpage
+<p>&nbsp;</p>
 
 ## Conclusions
 
